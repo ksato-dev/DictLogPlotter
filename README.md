@@ -6,9 +6,9 @@
 $ python3 plot.py --extract_data key1 
 ```
 
-- case2 (specify key & xy range)
+~~- case2 (specify key & xy range)~~
 ```
-~~$ python3 plot.py --extract_data key2 --range_x 20:100 --range_y 0:100~~
+$ python3 plot.py --extract_data key2 --range_x 20:100 --range_y 0:100~~
 ```
 
 - case3 (specify keys)
@@ -16,9 +16,9 @@ $ python3 plot.py --extract_data key1
 $ python3 plot.py --extract_data key1 key2
 ```
 
-- case4 (specify keys, plot all graphs in same window)
+~~- case4 (specify keys, plot all graphs in same window)~~
 ```
-~~$ python3 plot.py --extract_data key1 key2 --use_same_window True~~
+$ python3 plot.py --extract_data key1 key2 --use_same_window True
 ```
 
 ## format of log-file 

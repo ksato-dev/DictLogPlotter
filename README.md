@@ -32,7 +32,5 @@ key13:value13, key23:value23, key33:value33, ...
 ## output
 Show graph using value against specified key.
 
-#####################
-## sample of graph ##
-#####################
+![Alt text](/images/sample.png)
 

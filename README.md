@@ -1,4 +1,6 @@
 # DictLogPlotter
+This is a plotter for simple structure such as dictionary (key & value). 
+
 Now developing...
 
 ## todo

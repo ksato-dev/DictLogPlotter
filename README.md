@@ -2,8 +2,9 @@
 Now developing...
 
 ## todo
-- [] add flags range_x & range_y
-- [] add flag use_same_window
+
+- [ ] add flags range_x & range_y
+- [ ] add flag use_same_window
 
 ## usage
 - case1 (specify key against value & scale auto range)

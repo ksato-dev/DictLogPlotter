@@ -42,12 +42,12 @@ class DictLogPlotter():
         for elem in key_and_val_list:
             elem = elem.strip()
             key, value = None, None
-            if (elem != "" and len(elem) > 1):
+            if (elem != "" and ":" in elem):
                 key, value = elem.split(":")
             # print("key:", key, ", value:", value)
 
             if (0 < self.extract_keys.count(key)):
-                self.y_dict[key].append(int(value))
+                self.y_dict[key].append(float(value))
 
     def __scan_file(self, file_obj):
         for str_line in file_obj:
@@ -63,22 +63,24 @@ class DictLogPlotter():
             value_array = self.y_dict[key]
             x = np.arange(0, len(value_array))
             y = np.array(value_array)
-            plt.plot(x, y)
+            plt.figure(figsize=(12, 8), dpi=200)
+            plt.plot(x, y, linewidth=0.3, marker=".", markersize=0.8)
             plt.title(key)
             plt.xlabel("id")
             plt.ylabel("value")
+            plt.grid()
             plt.show()
-
 
 if __name__ == "__main__":
     hoge = DictLogPlotter()
-    print(hoge.read_args())
+    # print(hoge.read_args())
+    hoge.read_args()
 
-    print(hoge.range_x)
+    # print(hoge.range_x)
     hoge.parse_file()
 
-    print()
-    print(hoge.y_dict)
+    # print()
+    # print(hoge.y_dict)
     hoge.plot()
 
     

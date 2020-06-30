@@ -1,4 +1,5 @@
-## 
+# DictLogPlotter
+Now developing...
 
 ## usage
 - case1 (specify key against value & scale auto range)

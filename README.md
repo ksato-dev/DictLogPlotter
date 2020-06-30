@@ -4,7 +4,7 @@ Now developing...
 ## usage
 - case1 (specify key against value & scale auto range)
 ```
-$ python3 plot.py --extract_data key1 
+$ python3 plot.py --extract_data key1 --file_name ./data/hoge.txt
 ```
 
 ~~- case2 (specify key & xy range)~~
@@ -14,7 +14,7 @@ $ python3 plot.py --extract_data key2 --range_x 20:100 --range_y 0:100~~
 
 - case3 (specify keys)
 ```
-$ python3 plot.py --extract_data key1 key2
+$ python3 plot.py --extract_data key1 key2 --file_name ./data/hoge.txt
 ```
 
 ~~- case4 (specify keys, plot all graphs in same window)~~

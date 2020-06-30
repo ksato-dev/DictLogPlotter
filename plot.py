@@ -58,6 +58,18 @@ class DictLogPlotter():
         with open(self.file_name, "r") as fobj:
             self.__scan_file(fobj)
 
+    def plot(self):
+        for key in self.y_dict.keys():
+            value_array = self.y_dict[key]
+            x = np.arange(0, len(value_array))
+            y = np.array(value_array)
+            plt.plot(x, y)
+            plt.title(key)
+            plt.xlabel("id")
+            plt.ylabel("value")
+            plt.show()
+
+
 if __name__ == "__main__":
     hoge = DictLogPlotter()
     print(hoge.read_args())
@@ -67,6 +79,7 @@ if __name__ == "__main__":
 
     print()
     print(hoge.y_dict)
+    hoge.plot()
 
     
 

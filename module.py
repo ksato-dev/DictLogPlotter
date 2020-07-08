@@ -59,15 +59,25 @@ class DictLogPlotter():
             self.__scan_file(fobj)
 
     def plot(self):
+        fig, ax = plt.subplots()
+
+        ax.set_xlabel('t')  # x軸ラベル
+        ax.set_ylabel('value')  # y軸ラベル
+        # ax.set_title(r'$\sin(x)$ and $\cos(x)$') # グラフタイトル
         for key in self.y_dict.keys():
             value_array = self.y_dict[key]
             x = np.arange(0, len(value_array))
             y = np.array(value_array)
-            plt.figure(figsize=(12, 8), dpi=200)
-            plt.plot(x, y, linewidth=0.3, marker=".", markersize=0.8)
-            plt.title(key)
-            plt.xlabel("id")
-            plt.ylabel("value")
-            plt.grid()
-            plt.show()
+            # plt.figure(figsize=(12, 8), dpi=200)
+            ax.plot(x, y, linewidth=0.3, marker=".", markersize=0.8, label=key)
+            # plt.title(key)
+            # plt.xlabel("id")
+            # plt.ylabel("value")
+            # plt.grid()
+
+        ax.grid()
+        ax.legend(loc=0)    # 凡例
+        fig.tight_layout()  # レイアウトの設定
+
+        plt.show()
 

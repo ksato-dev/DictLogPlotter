@@ -75,7 +75,7 @@ class DictLogPlotter():
     def plot_overlapping(self):
         fig, ax = plt.subplots()
 
-        ax.set_xlabel('t')  # x軸ラベル
+        ax.set_xlabel('id')  # x軸ラベル
         ax.set_ylabel('value')  # y軸ラベル
         # ax.set_title(r'$\sin(x)$ and $\cos(x)$') # グラフタイトル
         for key in self.y_dict.keys():

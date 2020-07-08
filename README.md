@@ -26,7 +26,7 @@ $ python3 test_plot.py --extract_keys key1 key2 --file_name ./data/hoge.txt
 
 - case4 (specify keys, plot all graphs in same window)
 ```
-$ python3 test_plot.py --file_name ./data/0708/test5.txt --extract_keys filterd_bias1 filterd_bias2 curr_params.bias --overlap_on True
+$ python3 test_plot.py --extract_keys filterd_bias1 filterd_bias2 curr_params.bias --file_name ./data/0708/test5.txt --overlap_on True
 ```
 
 ## format of log-file 

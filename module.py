@@ -18,6 +18,7 @@ class DictLogPlotter():
         parser.add_argument("--range_y", default="", type=str, help="")
         parser.add_argument("--use_same_window", default=False, type=bool, help="")
         parser.add_argument("--file_name", default="", type=str, help="")
+        parser.add_argument("--overlap_on", default=False, type=bool, help="")
 
         args = parser.parse_args()
         self.extract_keys = args.extract_keys
@@ -59,6 +60,19 @@ class DictLogPlotter():
             self.__scan_file(fobj)
 
     def plot(self):
+        for key in self.y_dict.keys():
+            value_array = self.y_dict[key]
+            x = np.arange(0, len(value_array))
+            y = np.array(value_array)
+            plt.figure(figsize=(12, 8), dpi=200)
+            plt.plot(x, y, linewidth=0.3, marker=".", markersize=0.8)
+            plt.title(key)
+            plt.xlabel("id")
+            plt.ylabel("value")
+            plt.grid()
+            plt.show()
+
+    def plot_overlapping(self):
         fig, ax = plt.subplots()
 
         ax.set_xlabel('t')  # x軸ラベル
@@ -80,4 +94,3 @@ class DictLogPlotter():
         fig.tight_layout()  # レイアウトの設定
 
         plt.show()
-

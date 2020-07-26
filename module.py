@@ -8,27 +8,27 @@ class DictLogPlotter():
         self.extract_keys = []
         self.range_x = []
         self.range_y = []
-        self.use_same_window = False
+        # self.use_same_window = False
         self.file_name = ""
 
     def read_args(self):
         parser = argparse.ArgumentParser()
         parser.add_argument("--extract_keys", nargs="*", default="", type=str, help="")
-        parser.add_argument("--range_x", default="", type=str, help="")
-        parser.add_argument("--range_y", default="", type=str, help="")
-        parser.add_argument("--use_same_window", default=False, type=bool, help="")
+        # parser.add_argument("--range_x", default="", type=str, help="")
+        # parser.add_argument("--range_y", default="", type=str, help="")
+        # parser.add_argument("--use_same_window", default=False, type=bool, help="")
         parser.add_argument("--file_name", default="", type=str, help="")
         parser.add_argument("--overlap_on", default=False, type=bool, help="")
 
         args = parser.parse_args()
         self.extract_keys = args.extract_keys
-        self.use_same_window = args.use_same_window
+        # self.use_same_window = args.use_same_window
         self.file_name = args.file_name
 
-        if (args.range_x != ""):
-            self.range_x = args.range_x.split(":")
-        if (args.range_y != ""):
-            self.range_y = args.range_y.split(":")
+        # if (args.range_x != ""):
+        #     self.range_x = args.range_x.split(":")
+        # if (args.range_y != ""):
+        #     self.range_y = args.range_y.split(":")
 
         ## Initialize elems in dict.
         if (self.extract_keys != ""):
@@ -44,6 +44,7 @@ class DictLogPlotter():
             elem = elem.strip()
             key, value = None, None
             if (elem != "" and ":" in elem):
+                print(elem)
                 key, value = elem.split(":")
             # print("key:", key, ", value:", value)
 
